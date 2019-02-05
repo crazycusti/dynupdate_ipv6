@@ -3,7 +3,7 @@
 var1=$(dig +short ###YOUR DYNDNS DOMAIN###);
 var2=$(curl ipinfo.io/ip);
 
-if [ $var1 = $var2 ]; then
+if [ "$var1" = "$var2" ]; then
 echo "OK"
 else
 curl "https://USER:PASSWORD@members.dyndns.org/nic/update?hostname=YOURDYNDNSDOMAIN&myip=YOURIPV6ADRESS"
